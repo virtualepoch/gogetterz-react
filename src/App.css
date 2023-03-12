@@ -16,7 +16,7 @@ a {
 }
 
 .cart {
-  background: url(./assets/cart-shopping-solid.svg) center / 55% 55% no-repeat, radial-gradient(gray, rgb(55, 55, 55));
+  background: url(./assets/cart-shopping-solid.svg) center / 70% 70% no-repeat, radial-gradient(gray, rgb(55, 55, 55));
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,3 +1,6 @@
+import { CartContext } from "../CartContext";
+import { useContext } from "react";
+
 export function ProductCard(props) {
   // props.product is the product we are selling
   const style = {
@@ -10,7 +13,7 @@ export function ProductCard(props) {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      padding: "20px"
+      padding: "20px",
     },
     title: {
       width: "fit-content",
@@ -26,12 +29,33 @@ export function ProductCard(props) {
   };
 
   const product = props.product;
+  const cart = useContext(CartContext);
+  const productQuantity = cart.getProductQuantity(product.id);
 
   return (
     <div style={style.card}>
       <div style={style.title}>{product.title}</div>
       <div style={style.price}>{product.price}</div>
-      <button style={style.button}>Add To Cart</button>
+      {productQuantity > 0 ? (
+        <>
+          <div style={style.quantityRow}>
+            <div>In Cart: {productQuantity}</div>
+            <button style={style.addBtn} type="button" onClick={() => cart.addOneToCart(product.id)}>
+              +
+            </button>
+            <button style={style.subtractBtn} type="button" onClick={() => cart.removeOneFromCart(product.id)}>
+              -
+            </button>
+          </div>
+          <button style={style.removeAllBtn} type="button" onClick={() => cart.deleteFromCart(product.id)}>
+            Remove All
+          </button>
+        </>
+      ) : (
+        <button style={style.button} onClick={() => cart.addOneToCart(product.id)}>
+          Add To Cart
+        </button>
+      )}
     </div>
   );
 }

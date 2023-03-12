@@ -12,7 +12,7 @@ export function Store() {
     },
     item: {
       borderRadius: "10px",
-      boxShadow: "0 0 10px gray",
+      boxShadow: "0 2px 5px lightgray",
     }
   };
 

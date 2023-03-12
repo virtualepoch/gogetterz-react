@@ -1,15 +1,19 @@
 .App {
-  text-align: center;
+  border: solid 3px aqua;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  background: url(./assets/logos/gogetterz_01_100_trans.png) 0 0 / 100% 100%;
 }
+
+.cart {
+  background: url(./assets/cart-shopping-solid.svg) center / 70% 70% no-repeat;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .btn-border {
+    animation: action-btn-anim infinite 10s linear;
   }
 }
 
@@ -28,11 +32,11 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes action-btn-anim {
   from {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }

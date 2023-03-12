@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { NavBar } from "./components/NavBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Store } from "./pages/Store";
+import { Success } from "./pages/Success";
+import { Cancel } from "./pages/Cancel";
+
+const pageContainer = {
+  maxWidth: "1200px",
+  margin: "0 auto",
+  padding: "20px 10px",
+  border: "solid blue",
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavBar />
+        <section style={{ ...pageContainer }}>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="store" element={<Store />} />
+            <Route path="success" element={<Success />} />
+            <Route path="cancel" element={<Cancel />} />
+          </Routes>
+        </section>
+      </BrowserRouter>
     </div>
   );
 }

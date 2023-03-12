@@ -1,12 +1,12 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { NavBar } from "./components/NavBar";
+import { CartProvider } from "./CartContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HeaderNavMenuCart } from "./components/HeaderNavMenuCart";
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { Success } from "./pages/Success";
 import { Cancel } from "./pages/Cancel";
-import { CartProvider } from "./CartContext";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const pageContainer = {
   maxWidth: "1200px",
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
-          <NavBar />
+          <HeaderNavMenuCart />
           <section style={{ ...pageContainer }}>
             <Routes>
               <Route index element={<Home />} />

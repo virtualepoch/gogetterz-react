@@ -1,15 +1,23 @@
 .App {
-  border: solid 3px aqua;
+  border: solid 1px white;
 }
 
 .logo {
-  background: url(./assets/logos/gogetterz_01_100_trans.png) 0 0 / 100% 100%;
+  background: url(./assets/logos/gogetterz_01_100_trans.png) center / 90% 90% no-repeat;
+}
+
+.logo:hover {
+  transform: rotate(-10deg);
+  transition: transform 200ms ease-in-out;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .cart {
-  background: url(./assets/cart-shopping-solid.svg) center / 70% 70% no-repeat;
+  background: url(./assets/cart-shopping-solid.svg) center / 55% 55% no-repeat, radial-gradient(gray, rgb(55, 55, 55));
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .btn-border {
@@ -17,6 +25,16 @@
   }
 }
 
+.itemContainer{
+  grid-template-columns: auto auto auto;
+}
+
+@media (max-width: 700px) {
+  .itemContainer{
+    grid-template-columns: auto;
+  }
+
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

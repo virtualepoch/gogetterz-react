@@ -9,9 +9,10 @@ import { Cancel } from "./pages/Cancel";
 
 const pageContainer = {
   maxWidth: "1200px",
+  height: "200vh",
   margin: "0 auto",
   padding: "20px 10px",
-  border: "solid blue",
+  boxShadow: "inset 0 0 20px gray",
 };
 
 function App() {

@@ -6,7 +6,9 @@ export function NavBar() {
   const style = {
     NavBar: {
       width: "100%",
-      background: "black",
+      background: "linear-gradient(to left, transparent, black, transparent)",
+      backdropFilter: "blur(5px)",
+      boxShadow: "0 3px 10px 1px rgba(0,0,0,0.5)",
       position: "sticky",
       top: 0,
       margin: "0 auto",
@@ -15,14 +17,18 @@ export function NavBar() {
       justifyContent: "space-between",
     },
     menuBtn: {
-      width: "60px",
-      height: "60px",
-      background: "transparent",
-      border: "solid red",
+      width: "56px",
+      height: "56px",
+      margin: "2px",
+      background: "radial-gradient(gray, rgb(55, 55, 55))",
+      border: "none",
+      borderRadius: "10px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
+      boxShadow: "inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px black",
+      filter: "drop-shadow(0 0 5px white)",
     },
     bar1: {
       width: "30px",
@@ -61,12 +67,10 @@ export function NavBar() {
       height: "60px",
       display: "flex",
       alignItems: "center",
-      border: "solid blue",
     },
     logo: {
       width: "60px",
       height: "60px",
-      border: "solid red",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -74,21 +78,26 @@ export function NavBar() {
     title: {
       height: "60px",
       background: "transparent",
-      border: "solid red",
       color: "white",
       display: "flex",
       alignItems: "center",
       padding: "0 10px",
+      textDecoration: "none",
     },
     cart: {
       width: "60px",
       height: "60px",
-      border: "solid red",
+      borderRadius: "10px",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
+      boxShadow: "inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px black",
+      filter: "drop-shadow(0 0 5px white)",
     },
+    modalContainer: {
+      width: "100%",
+    }
   };
 
   const [show, setShow] = useState(false);
@@ -98,7 +107,7 @@ export function NavBar() {
   return (
     <>
       <nav style={style.NavBar}>
-        <button style={style.menuBtn}>
+        <button style={style.menuBtn} className="menuBtn">
           <div style={style.bar1}></div>
           <div style={style.bar2}></div>
           <div style={style.barX1}></div>
@@ -107,12 +116,12 @@ export function NavBar() {
         <Link to={"/"}>
           <div style={style.logoTitleContainer}>
             <div style={style.logo} className="logo"></div>
-            <h1 style={style.title}>GoGetterz</h1>
+            <h1 style={style.title} className="text-decoration-none">GoGetterz</h1>
           </div>
         </Link>
-        <Button style={style.cart} className="cart" onClick={handleShow}></Button>
+        <button style={style.cart} className="cart" onClick={handleShow}></button>
       </nav>
-      <Modal show={show} onHide={handleClose}>
+      <Modal style={style.modalContainer} show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Shopping Cart</Modal.Title>
         </Modal.Header>

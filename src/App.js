@@ -10,10 +10,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const pageContainer = {
   maxWidth: "1200px",
-  height: "200vh",
   margin: "0 auto",
   padding: "20px 10px",
-  boxShadow: "inset 0 0 10px lightgray",
 };
 
 function App() {

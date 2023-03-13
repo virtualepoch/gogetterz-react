@@ -20,7 +20,7 @@ export function ActionBtn() {
       width: "300px",
       height: "300px",
       padding: "0 20px",
-      background: "conic-gradient(gold, aqua, gold, aqua, gold)",
+      background: "conic-gradient(gold, transparent, gold, transparent, gold)",
       color: "white",
       border: "none",
       borderRadius: "10px",

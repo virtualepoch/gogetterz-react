@@ -7,8 +7,6 @@ export function Store() {
       width: "100%",
       maxWidth: "1200px",
       margin: "0 auto",
-      display: "grid",
-      gap: "20px",
     },
     item: {
       borderRadius: "10px",

@@ -3,6 +3,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { CartContext } from "../CartContext";
 import { CartProduct } from "./CartProduct";
+import "./header.css"
 
 export function HeaderNavMenuCart() {
   // element styling

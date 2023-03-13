@@ -44,8 +44,9 @@ export function ProductCard(props) {
 
   return (
     <div style={style.card}>
+      <img src={product.imgUrl} width="250px"></img>
       <div style={style.title}>{product.title}</div>
-      <div style={style.price}>{product.price}</div>
+      <div style={style.price}>${product.price}</div>
       {productQuantity > 0 ? (
         <>
           <div style={style.quantityRow}>

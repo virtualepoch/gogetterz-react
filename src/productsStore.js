@@ -1,32 +1,33 @@
-import img01 from "./assets/images/01.jpg";
-import img02 from "./assets/images/02.jpg";
-import img03 from "./assets/images/03.jpg";
-import img04 from "./assets/images/04.jpg";
+import imgTshirtWhite01 from "./assets/images/card-images/hoodie_white_500.jpg";
+import imgTshirtBlack01 from "./assets/images/card-images/hoodie_black_500.jpg";
+import imgHat01 from "./assets/images/card-images/hat_01_500.jpg";
+import imgHat02 from "./assets/images/card-images/hat_02_500.jpg";
+import imgSticker01 from "./assets/logos/gogetterz_01_500.png";
 
 const productsArray = [
   {
     id: "1",
     title: "T-Shirt - White",
     price: 29.99,
-    imgUrl: img01,
+    imgUrl: imgTshirtWhite01,
   },
   {
     id: "2",
     title: "T-Shirt - Black",
     price: 29.99,
-    imgUrl: img02,
+    imgUrl: imgTshirtBlack01,
   },
   {
     id: "3",
     title: "Hoodie - White",
     price: 49.99,
-    imgUrl: img03,
+    imgUrl: imgTshirtWhite01,
   },
   {
     id: "4",
     title: "Hoodie - Black",
     price: 49.99,
-    imgUrl: img04,
+    imgUrl: imgTshirtBlack01,
   },
   {
     id: "5",
@@ -42,11 +43,25 @@ const productsArray = [
     id: "7",
     title: "Hat",
     price: 34.99,
+    imgUrl: imgHat01,
   },
   {
     id: "8",
+    title: "Hat",
+    price: 34.99,
+    imgUrl: imgHat02,
+  },
+  {
+    id: "9",
     title: "Sticker",
     price: 4.99,
+    imgUrl: imgSticker01,
+  },
+  {
+    id: "10",
+    title: "Sticker",
+    price: 4.99,
+    imgUrl: imgSticker01,
   },
 ];
 

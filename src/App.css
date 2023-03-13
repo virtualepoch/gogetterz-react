@@ -39,3 +39,30 @@ a {
     transform: rotate(-360deg);
   }
 }
+
+.addToCartBtnText {
+  filter: drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold);
+  animation: addToCartBtnText-anim 8s ease-in-out infinite;
+}
+
+@keyframes addToCartBtnText-anim {
+  0% {
+    filter: none;
+  }
+  80% {
+    filter: none;
+  }
+  90% {
+    filter: drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold);
+  }
+  100% {
+    filter: none;
+  }
+}
+
+.modal-dialog,
+.modal-content {
+  top: 30px;
+  height: 93%;
+  overflow: auto;
+}

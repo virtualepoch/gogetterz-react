@@ -3,7 +3,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 import { CartContext } from "../CartContext";
 import { CartProduct } from "./CartProduct";
-import "./header.css"
+import "./header.css";
 
 export function HeaderNavMenuCart() {
   // element styling
@@ -69,7 +69,8 @@ export function HeaderNavMenuCart() {
   const styleModal = {
     modalContainer: {
       width: "100%",
-      top: "65px",
+      MarginBottom: "20px",
+      overflow: "auto",
     },
   };
 

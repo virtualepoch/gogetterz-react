@@ -15,6 +15,9 @@ export function ProductCard(props) {
       justifyContent: "center",
       padding: "20px",
     },
+    cardImg: {
+      width: "100%",
+    },
     title: {
       width: "fit-content",
     },
@@ -22,9 +25,10 @@ export function ProductCard(props) {
       width: "fit-content",
     },
     button: {
-      width: "fit-content",
+      width: "200px",
+      height: "50px",
       padding: "0 10px",
-      borderRadius: "10px",
+      borderRadius: "20px",
     },
     addBtn: {
       width: "40px",
@@ -36,6 +40,46 @@ export function ProductCard(props) {
       padding: "0 10px",
       borderRadius: "10px",
     },
+    btnContainer: {
+      width: "200px",
+      height: "60px",
+      padding: "0 20px",
+      borderRadius: "120px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      position: "relative",
+      margin: "0 auto",
+      overflow: "hidden",
+    },
+    btnBorder: {
+      width: "300px",
+      height: "300px",
+      padding: "0 20px",
+      background: "conic-gradient(gold, transparent, gold, transparent, gold)",
+      color: "white",
+      border: "none",
+      borderRadius: "10px",
+      position: "absolute",
+    },
+    addToCartBtn: {
+      width: "195px",
+      height: "55px",
+      padding: "0 20px",
+      background: "radial-gradient(ellipse at 50% 50%, black, rgba(55, 55, 55, 0.8))",
+      color: "white",
+      border: "none",
+      borderRadius: "100px",
+      position: "absolute",
+      boxShadow: "inset -2px 2px 5px 1px rgba(255, 255, 255, 0.5), inset 2px -2px 5px 1px black",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    addToCartBtnText: {
+      // filter: "drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold)",
+      color: "white",
+    },
   };
 
   const product = props.product;
@@ -44,7 +88,7 @@ export function ProductCard(props) {
 
   return (
     <div style={style.card}>
-      <img src={product.imgUrl} width="250px"></img>
+      <img style={style.cardImg} src={product.imgUrl}></img>
       <div style={style.title}>{product.title}</div>
       <div style={style.price}>${product.price}</div>
       {productQuantity > 0 ? (
@@ -63,9 +107,12 @@ export function ProductCard(props) {
           </button>
         </>
       ) : (
-        <button style={style.button} onClick={() => cart.addOneToCart(product.id)}>
-          Add To Cart
-        </button>
+        <div style={style.btnContainer}>
+          <div style={style.btnBorder} className="btn-border"></div>
+          <button style={style.addToCartBtn} onClick={() => cart.addOneToCart(product.id)}>
+            <div style={style.addToCartBtnText} className="addToCartBtnText">ADD TO CART</div>
+          </button>
+        </div>
       )}
     </div>
   );

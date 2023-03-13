@@ -26,6 +26,16 @@ export function ProductCard(props) {
       padding: "0 10px",
       borderRadius: "10px",
     },
+    addBtn: {
+      width: "40px",
+      padding: "0 10px",
+      borderRadius: "10px",
+    },
+    subtractBtn: {
+      width: "40px",
+      padding: "0 10px",
+      borderRadius: "10px",
+    },
   };
 
   const product = props.product;

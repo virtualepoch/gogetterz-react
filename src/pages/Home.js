@@ -9,7 +9,7 @@ import "./pages.css";
 
 export function Home() {
   return (
-    <>
+    <div className="home-page">
       <div className="header-container">
         <h1 className="welcome-to">Welcome to</h1>
         <h1 className="gogetterz">
@@ -26,6 +26,6 @@ export function Home() {
         <img src={homeImg5} className="home-img img-5" />
       </div>
       <ActionBtn />
-    </>
+    </div>
   );
 }

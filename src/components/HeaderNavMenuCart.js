@@ -60,7 +60,7 @@ export function HeaderNavMenuCart() {
       filter: "drop-shadow(0 0 5px white)",
     },
     cartBtnQuantity: {
-      transform: "translate(3px, -6px)",
+      transform: "translate(1px, -8px)",
       color: "red",
     },
   };

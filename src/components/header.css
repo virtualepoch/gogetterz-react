@@ -65,9 +65,9 @@
 .main-nav {
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 60px);
   position: fixed;
-  top: 65px;
+  top: 60px;
   left: 0;
   right: 0;
   z-index: 7777;
@@ -77,8 +77,9 @@
   flex-direction: column;
   text-align: center;
   font-size: 25px;
-  background: rgb(0, 0, 0);
-  transform: translateY(calc(-100% - 65px));
+  background: rgb(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  transform: translateY(calc(-100% - 60px));
   transition: 0.5s;
   overflow-y: auto;
 }
@@ -89,7 +90,7 @@
 
 .link {
   width: fit-content;
-  padding: 7px;
+  padding: 7px 11px;
   color: white;
   filter: drop-shadow(0 0 3px gold);
 }
@@ -131,8 +132,10 @@ li.active .link,
 .link:hover {
   transform: scale(1.1);
   box-shadow: 1px 4px 5px 2px rgb(0, 0, 0, 0.3);
-  background: white;
+  background: gold;
   color: black;
+  border-radius: 50px;
+  box-shadow: inset -2px 2px 5px 1px white, inset 2px -2px 5px 1px gray;
 }
 
 @media (min-width: 777px) {
@@ -186,5 +189,5 @@ li.active .link,
 }
 
 .cartBtn {
-    background: url(../assets/cart-shopping-solid.svg) center / 70% 70% no-repeat, radial-gradient(gray, rgb(55, 55, 55));
-  }
+  background: url(../assets/cart-shopping-solid.svg) center / 70% 70% no-repeat, radial-gradient(gray, rgb(55, 55, 55));
+}

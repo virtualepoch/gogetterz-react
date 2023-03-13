@@ -70,7 +70,25 @@ export function HeaderNavMenuCart() {
     modalContainer: {
       width: "100%",
       MarginBottom: "20px",
+      paddingBottom: "50px",
       overflow: "auto",
+    },
+    purchaseBtn: {
+      width: "200px",
+      height: "50px",
+      padding: "0 20px",
+      margin: "30px auto",
+      background: "radial-gradient(ellipse at 50% 50%, rgb(0, 35, 255), rgba(55, 55, 55, 0.8))",
+      color: "white",
+      border: "none",
+      borderRadius: "100px",
+      position: "relative",
+      left: 0,
+      right: 0,
+      boxShadow: "inset -2px 2px 5px 1px rgba(255, 255, 255, 0.5), inset 2px -2px 5px 1px black",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
     },
   };
 
@@ -160,9 +178,11 @@ export function HeaderNavMenuCart() {
                 <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
               ))}
 
-              <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
+              <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
 
-              <button type="button">Purchase items!</button>
+              <button style={styleModal.purchaseBtn} type="button">
+                Purchase items!
+              </button>
             </>
           ) : (
             <h1>There are no items in your cart!</h1>

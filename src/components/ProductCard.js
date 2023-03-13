@@ -86,7 +86,7 @@ export function ProductCard(props) {
       width: "195px",
       height: "55px",
       padding: "0 20px",
-      background: "radial-gradient(ellipse at 50% 50%, rgb(0, 35, 155), rgba(55, 55, 55, 0.8))",
+      background: "radial-gradient(ellipse at 50% 50%, rgb(0, 35, 255), rgba(55, 55, 55, 0.8))",
       color: "white",
       border: "none",
       borderRadius: "100px",

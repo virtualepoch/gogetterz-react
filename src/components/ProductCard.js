@@ -17,6 +17,8 @@ export function ProductCard(props) {
     },
     cardImg: {
       width: "100%",
+      borderRadius: "10px",
+      boxShadow: "0 0 15px 1px gray",
     },
     title: {
       width: "fit-content",
@@ -24,21 +26,38 @@ export function ProductCard(props) {
     price: {
       width: "fit-content",
     },
-    button: {
-      width: "200px",
-      height: "50px",
-      padding: "0 10px",
-      borderRadius: "20px",
+    quantityRow: {
+      width: "100% ",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-around",
+      padding: "10px 0",
+    },
+    addSubtractRow: {
+      width: "40%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-around",
     },
     addBtn: {
-      width: "40px",
-      padding: "0 10px",
-      borderRadius: "10px",
+      width: "50px",
+      height: "50px",
+      borderRadius: "50px",
+      fontSize: "30px",
+      background: "blue",
+      border: "none",
+      color: "white",
+      boxShadow: "inset -2px 2px 5px 1px rgba(255, 255, 255, 0.5), inset 2px -2px 5px 1px rgba(55, 55, 55, 0.5), 0 2px 10px 1px gray",
     },
     subtractBtn: {
-      width: "40px",
-      padding: "0 10px",
-      borderRadius: "10px",
+      width: "50px",
+      height: "50px",
+      borderRadius: "50px",
+      fontSize: "30px",
+      background: "rgb(200, 0, 0)",
+      border: "none",
+      color: "white",
+      boxShadow: "inset -2px 2px 5px 1px rgba(255, 255, 255, 0.5), inset 2px -2px 5px 1px rgba(55, 55, 55, 0.5), 0 2px 10px 1px gray",
     },
     btnContainer: {
       width: "200px",
@@ -51,6 +70,7 @@ export function ProductCard(props) {
       position: "relative",
       margin: "0 auto",
       overflow: "hidden",
+      boxShadow: " 0 2px 5px 1px lightgray",
     },
     btnBorder: {
       width: "300px",
@@ -66,7 +86,7 @@ export function ProductCard(props) {
       width: "195px",
       height: "55px",
       padding: "0 20px",
-      background: "radial-gradient(ellipse at 50% 50%, black, rgba(55, 55, 55, 0.8))",
+      background: "radial-gradient(ellipse at 50% 50%, rgb(0, 35, 155), rgba(55, 55, 55, 0.8))",
       color: "white",
       border: "none",
       borderRadius: "100px",
@@ -76,9 +96,15 @@ export function ProductCard(props) {
       alignItems: "center",
       justifyContent: "center",
     },
-    addToCartBtnText: {
-      // filter: "drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold)",
+    removeAllBtn: {
+      width: "130px",
+      height: "40px",
+      marginTop: "30px",
+      borderRadius: "40px",
+      background: "rgb(200, 0, 0)",
+      border: "none",
       color: "white",
+      boxShadow: "inset -2px 2px 5px 1px rgba(255, 255, 255, 0.5), inset 2px -2px 5px 1px rgba(55, 55, 55, 0.5), 0 2px 10px 1px gray",
     },
   };
 
@@ -95,12 +121,14 @@ export function ProductCard(props) {
         <>
           <div style={style.quantityRow}>
             <div>In Cart: {productQuantity}</div>
-            <button style={style.addBtn} type="button" onClick={() => cart.addOneToCart(product.id)}>
-              +
-            </button>
-            <button style={style.subtractBtn} type="button" onClick={() => cart.removeOneFromCart(product.id)}>
-              -
-            </button>
+            <div style={style.addSubtractRow}>
+              <button style={style.addBtn} type="button" onClick={() => cart.addOneToCart(product.id)}>
+                +
+              </button>
+              <button style={style.subtractBtn} type="button" onClick={() => cart.removeOneFromCart(product.id)}>
+                -
+              </button>
+            </div>
           </div>
           <button style={style.removeAllBtn} type="button" onClick={() => cart.deleteFromCart(product.id)}>
             Remove All
@@ -110,7 +138,7 @@ export function ProductCard(props) {
         <div style={style.btnContainer}>
           <div style={style.btnBorder} className="btn-border"></div>
           <button style={style.addToCartBtn} onClick={() => cart.addOneToCart(product.id)}>
-            <div style={style.addToCartBtnText} className="addToCartBtnText">ADD TO CART</div>
+            <div className="addToCartBtnText">ADD TO CART</div>
           </button>
         </div>
       )}

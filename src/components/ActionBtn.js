@@ -15,6 +15,7 @@ export function ActionBtn() {
       right: 0,
       margin: "0 auto",
       overflow: "hidden",
+      boxShadow: " 0 2px 5px 1px gray",
     },
     btnBorder: {
       width: "300px",

@@ -33,11 +33,13 @@ const productsArray = [
     id: "5",
     title: "Hoodie - Camo",
     price: 59.99,
+    imgUrl: imgTshirtWhite01,
   },
   {
     id: "6",
     title: "Hoodie - Pink",
     price: 59.99,
+    imgUrl: imgTshirtWhite01,
   },
   {
     id: "7",

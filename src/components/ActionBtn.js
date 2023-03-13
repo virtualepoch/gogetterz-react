@@ -13,6 +13,7 @@ export function ActionBtn() {
       bottom: "20px",
       left: 0,
       right: 0,
+      zIndex: "777",
       margin: "0 auto",
       overflow: "hidden",
       boxShadow: " 0 2px 5px 1px gray",

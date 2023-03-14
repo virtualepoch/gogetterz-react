@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./pages/home.css";
 import "./pages/about-contact.css";
+import { ThreeFiberCanvas } from "./components/ThreeFiberCanvas";
 
 const pageContainer = {
   maxWidth: "1200px",
@@ -23,6 +24,7 @@ function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
+          {/* <ThreeFiberCanvas /> */}
           <HeaderNavMenuCart />
           <section style={{ ...pageContainer }}>
             <Routes>

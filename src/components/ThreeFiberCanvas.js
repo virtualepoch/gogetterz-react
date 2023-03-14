@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Stars, useTexture, useControls, useHelper } from "@react-three/drei";
 import * as THREE from "three";
 import { DiamondBlue } from "../DiamondBlue";
+import { DiamondSolid } from "../DiamondSolid";
 
 const style = {
   threeJsCanvas: {
@@ -12,7 +13,7 @@ const style = {
     top: 0,
     // zIndex: "22222",
     // border: "solid red",
-    background: "linear-gradient(to right, rgb(0,100,100), black, rgb(0,100,100))",
+    background: "linear-gradient(to right, rgb(100,100,100), black, rgb(100,100,100))",
     // pointerEvents: "none",
   },
 };
@@ -63,7 +64,7 @@ function StarsAnim() {
     if (!starsRef.current) {
       return;
     }
-    starsRef.current.rotation.y += 0.0005;
+    starsRef.current.rotation.x += 0.0005;
   });
   return <Stars ref={starsRef} />;
 }
@@ -71,18 +72,18 @@ function StarsAnim() {
 function SpotLightHelper() {
   const spotLightRef = useRef(null);
 
-  useHelper(spotLightRef, THREE.SpotLightHelper);
+  // useHelper(spotLightRef, THREE.SpotLightHelper);
   return <spotLight ref={spotLightRef} position={[-1, 1, 4]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
 }
 
 export function ThreeFiberCanvas() {
   return (
-    <Canvas style={style.threeJsCanvas} camera={{ position: [0, 0, 5] }}>
+    <Canvas style={style.threeJsCanvas} camera={{ position: [0, 1, 5] }}>
       <OrbitControls />
       <ambientLight />
-      <spotLight position={[1, 1, 1]} intensity={4} />
+      <spotLight position={[1, 1, 4]} intensity={5} />
       <SpotLightHelper />
-      <DiamondBlue />
+      <DiamondSolid position={[0, -1.5, 0]} />
       {/* <DiamondTop />
       <DiamondBottom /> */}
       <StarsAnim />

@@ -7,18 +7,17 @@ export function ProductCard(props) {
     card: {
       width: "100%",
       height: "fit-content",
-      border: "1px solid darkgray",
       borderRadius: "10px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
       padding: "20px",
+      boxShadow: "0 2px 10px 1px lightgray",
     },
     cardImg: {
       width: "100%",
       borderRadius: "10px",
-      boxShadow: "0 0 15px 1px gray",
     },
     title: {
       width: "fit-content",

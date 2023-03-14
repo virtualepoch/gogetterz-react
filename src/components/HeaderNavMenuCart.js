@@ -11,7 +11,7 @@ export function HeaderNavMenuCart() {
     // header elements
     mainHeader: {
       width: "100%",
-      background: "linear-gradient(to left, transparent, black, transparent)",
+      background: "linear-gradient(to left, rgba(100, 100, 100, 0.7), rgba(0, 0, 0, 0.7), rgba(100, 100, 100, 0.7))",
       backdropFilter: "blur(5px)",
       boxShadow: "0 3px 10px 1px rgba(0,0,0,0.4)",
       position: "sticky",
@@ -57,8 +57,7 @@ export function HeaderNavMenuCart() {
       alignItems: "center",
       justifyContent: "center",
       cursor: "pointer",
-      boxShadow: "inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px black",
-      filter: "drop-shadow(0 0 5px white)",
+      boxShadow: "inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px rgba(0, 0, 0, 0.4)",
     },
     cartBtnQuantity: {
       transform: "translate(1px, -8px)",
@@ -113,11 +112,9 @@ export function HeaderNavMenuCart() {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
     return (
-      <li className={isActive ? "active" : "li-link"}>
-        <Link to={to} {...props} className="link">
-          {children}
-        </Link>
-      </li>
+      <Link to={to} {...props} className={isActive ? "active link" : "link"}>
+        {children}
+      </Link>
     );
   }
 
@@ -150,20 +147,18 @@ export function HeaderNavMenuCart() {
       </header>
 
       <nav className="main-nav" ref={navMenu}>
-        <ul>
-          <CustomLink className="link1" onClick={openCloseNavMenu} to={"/"}>
-            HOME
-          </CustomLink>
-          <CustomLink className="link2" onClick={openCloseNavMenu} to={"/store"}>
-            STORE
-          </CustomLink>
-          <CustomLink className="link3" onClick={openCloseNavMenu} to={"/about"}>
-            ABOUT
-          </CustomLink>
-          <CustomLink className="link4" onClick={openCloseNavMenu} to={"/contact"}>
-            CONTACT
-          </CustomLink>
-        </ul>
+        <CustomLink onClick={openCloseNavMenu} to={"/"}>
+          HOME
+        </CustomLink>
+        <CustomLink onClick={openCloseNavMenu} to={"/store"}>
+          STORE
+        </CustomLink>
+        <CustomLink onClick={openCloseNavMenu} to={"/about"}>
+          ABOUT
+        </CustomLink>
+        <CustomLink onClick={openCloseNavMenu} to={"/contact"}>
+          CONTACT
+        </CustomLink>
       </nav>
 
       <Modal style={styleModal.modalContainer} show={show} onHide={handleClose}>

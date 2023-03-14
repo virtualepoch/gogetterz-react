@@ -19,21 +19,21 @@ export function BtnToTop() {
     document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  var styles = {
+  var style = {
     toTopBtn: {
       width: "50px",
       height: "50px",
       position: "fixed",
       right: "15px",
-      bottom: "40px",
+      bottom: "15px",
       zIndex: 98,
       border: "none",
       borderRadius: "50%",
-      boxShadow: "inset -2px 2px 5px 1px lightgray, inset 2px -2px 5px 1px gray, -1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
-      background: "radial-gradient(gray, rgb(55, 55, 55))",
+      boxShadow: "inset -2px 2px 5px 1px lightgray, inset 2px -2px 5px 1px rgba(0, 0, 0, 0.4), -1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
+      background: "radial-gradient(rgb(128, 128, 128, 0.5), rgb(55, 55, 55, 0.5))",
       cursor: "pointer",
       transform: "translateY(200%)",
-      transition: "all 200ms ease-in-out",
+      transition: "all 300ms ease-in-out",
     },
     arrowLine: {
       width: "40%",
@@ -55,9 +55,9 @@ export function BtnToTop() {
   };
 
   return (
-    <button className="to-top-btn" style={styles.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
-      <div style={styles.arrowLine}></div>
-      <div style={{ ...styles.arrowLine, ...styles.arrowLine2 }}></div>
+    <button className="to-top-btn" style={style.toTopBtn} ref={toTopBtn} onClick={ScrollToTop}>
+      <div style={style.arrowLine}></div>
+      <div style={{ ...style.arrowLine, ...style.arrowLine2 }}></div>
     </button>
   );
 }

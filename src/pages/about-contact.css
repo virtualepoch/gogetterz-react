@@ -1,0 +1,17 @@
+/* ABOUT PAGE STYLING */
+.about-page-cont,
+.contact-page-cont {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-bg,
+.contact-bg {
+  width: 60%;
+  aspect-ratio: 1;
+  border: solid;
+  background: url(../assets/logos/gogetterz_01_500.png) 50% 50% / 100% no-repeat;
+}

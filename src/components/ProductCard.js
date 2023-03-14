@@ -114,7 +114,7 @@ export function ProductCard(props) {
 
   return (
     <div style={style.card}>
-      <img style={style.cardImg} src={product.imgUrl}></img>
+      <img style={style.cardImg} src={product.imgUrl} alt={product.altTag}></img>
       <div style={style.title}>{product.title}</div>
       <div style={style.price}>${product.price}</div>
       {productQuantity > 0 ? (

@@ -5,14 +5,14 @@ export function BtnToTop() {
 
   window.addEventListener("scroll", function () {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      toTopBtn.current.style.transform = "scale(1)";
+      toTopBtn.current.style.transform = "none";
     } else {
-      toTopBtn.current.style.transform = "scale(0)";
+      toTopBtn.current.style.transform = "translateY(200%)";
     }
 
-    if (window.innerWidth < 700) {
-      toTopBtn.current.style.transition = "none";
-    }
+    // if (window.innerWidth < 700) {
+    //   toTopBtn.current.style.transition = "none";
+    // }
   });
 
   function ScrollToTop() {
@@ -21,34 +21,36 @@ export function BtnToTop() {
 
   var styles = {
     toTopBtn: {
-      width: "45px",
-      height: "45px",
+      width: "50px",
+      height: "50px",
       position: "fixed",
       right: "15px",
       bottom: "40px",
-      zIndex: 888,
+      zIndex: 98,
       border: "none",
       borderRadius: "50%",
-      boxShadow: "-1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
-      background: "gold",
+      boxShadow: "inset -2px 2px 5px 1px lightgray, inset 2px -2px 5px 1px gray, -1px 1px 3px 1px rgb(0, 0, 0, 0.3)",
+      background: "radial-gradient(gray, rgb(55, 55, 55))",
       cursor: "pointer",
-      transform: "scale(0)",
-      transition: "all 200ms linear",
+      transform: "translateY(200%)",
+      transition: "all 200ms ease-in-out",
     },
     arrowLine: {
-      width: "14px",
-      height: "2px",
+      width: "40%",
+      height: "7%",
       position: "absolute",
-      top: "20px",
-      left: "11px",
-      background: "red",
-      transform: "rotate(-45deg)",
+      top: "44%",
+      left: "17%",
+      background: "gold",
+      filter: "drop-shadow(0 0 3px gold)",
+      transform: "rotate(-40deg)",
+      borderRadius: "10px",
       // pointerEvents: "none",
     },
     arrowLine2: {
       left: null,
-      right: "11px",
-      transform: "rotate(45deg)",
+      right: "17%",
+      transform: "rotate(40deg)",
     },
   };
 

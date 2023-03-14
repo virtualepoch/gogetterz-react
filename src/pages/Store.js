@@ -4,6 +4,9 @@ import { productsArray } from "../productsStore";
 
 export function Store() {
   const style = {
+    storeH1: {
+      margin: "40px auto",
+    },
     itemContainer: {
       width: "100%",
       maxWidth: "1200px",
@@ -18,7 +21,7 @@ export function Store() {
   return (
     <>
       <BtnToTop />
-      <h1>Welcome to the store front.</h1>
+      <h1 style={style.storeH1}>Welcome to the store front.</h1>
       <div style={style.itemContainer} className="itemContainer">
         {productsArray.map((product, idx) => (
           <div style={style.item} key={idx}>

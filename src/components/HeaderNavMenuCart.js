@@ -16,7 +16,7 @@ export function HeaderNavMenuCart() {
       boxShadow: "0 3px 10px 1px rgba(0,0,0,0.4)",
       position: "sticky",
       top: 0,
-      zIndex: "8888",
+      zIndex: "100",
       margin: "0 auto",
       display: "flex",
       alignItems: "center",
@@ -113,7 +113,7 @@ export function HeaderNavMenuCart() {
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({ path: resolvedPath.pathname, end: true });
     return (
-      <li className={isActive ? "active" : ""}>
+      <li className={isActive ? "active" : "li-link"}>
         <Link to={to} {...props} className="link">
           {children}
         </Link>

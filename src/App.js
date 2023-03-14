@@ -5,8 +5,12 @@ import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
 import { Success } from "./pages/Success";
 import { Cancel } from "./pages/Cancel";
-import "./App.css";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import "./pages/home.css";
+import "./pages/about-contact.css";
 
 const pageContainer = {
   maxWidth: "1200px",
@@ -26,6 +30,8 @@ function App() {
               <Route path="store" element={<Store />} />
               <Route path="success" element={<Success />} />
               <Route path="cancel" element={<Cancel />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
             </Routes>
           </section>
         </BrowserRouter>

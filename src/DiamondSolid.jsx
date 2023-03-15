@@ -20,11 +20,11 @@ export function DiamondSolid(props) {
     if (!meshRef.current) {
       return;
     }
-    meshRef.current.rotation.y -= 0.005;
+    meshRef.current.rotation.y -= 0.004;
   });
-  
+
   return (
-    <group ref={meshRef} {...props} dispose={null} scale={0.02}>
+    <group ref={meshRef} {...props} dispose={null}>
       <mesh geometry={nodes.Diamond_Diamond_0.geometry} material={materials.Diamond} />
     </group>
   );

@@ -18,7 +18,7 @@ export function Crown(props) {
     if (!meshRef.current) {
       return;
     }
-    meshRef.current.rotation.y -= 0.002;
+    meshRef.current.rotation.y -= 0.004;
   });
 
   const { nodes, materials } = useGLTF("/gltf/crown/scene.gltf");

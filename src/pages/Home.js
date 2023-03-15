@@ -9,7 +9,7 @@ import { ThreeFiberCanvas } from "../components/ThreeFiberCanvas";
 
 export function Home() {
   return (
-    <div className="home-page">
+    <>
       <ThreeFiberCanvas/>
       <div className="header-container">
         <h1 className="welcome-to">Welcome to</h1>
@@ -19,14 +19,14 @@ export function Home() {
         </h1>
       </div>
 
-      {/* <div className="img-stack-container">
+      <div className="img-stack-container">
         <img src={homeImg1} className="home-img img-1" alt="home-01" />
         <img src={homeImg2} className="home-img img-2" alt="home-02" />
         <img src={homeImg3} className="home-img img-3" alt="home-03" />
         <img src={homeImg4} className="home-img img-4" alt="home-04" />
         <img src={homeImg5} className="home-img img-5" alt="home-05" />
-      </div> */}
+      </div>
       <ActionBtn />
-    </div>
+    </>
   );
 }

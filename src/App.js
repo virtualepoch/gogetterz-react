@@ -1,5 +1,6 @@
 import { CartProvider } from "./CartContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BtnToTop } from "./components/BtnToTop";
 import { HeaderNavMenuCart } from "./components/HeaderNavMenuCart";
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
@@ -11,7 +12,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./pages/home.css";
 import "./pages/about-contact.css";
-import { ThreeFiberCanvas } from "./components/ThreeFiberCanvas";
 
 const pageContainer = {
   maxWidth: "1200px",
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
-          {/* <ThreeFiberCanvas /> */}
+          <BtnToTop />
           <HeaderNavMenuCart />
           <section style={{ ...pageContainer }}>
             <Routes>

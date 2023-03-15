@@ -2,8 +2,9 @@ import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Stars, useTexture, useControls, useHelper } from "@react-three/drei";
 import * as THREE from "three";
-import { DiamondBlue } from "../DiamondBlue";
 import { DiamondSolid } from "../DiamondSolid";
+import { DiamondBlue } from "../DiamondBlue";
+import { Crown } from "../Crown";
 
 const style = {
   threeJsCanvas: {
@@ -13,7 +14,7 @@ const style = {
     top: 0,
     // zIndex: "22222",
     // border: "solid red",
-    background: "linear-gradient(to right, rgb(100,100,100), black, rgb(100,100,100))",
+    background: "linear-gradient(to right, rgb(50,50,50), black, rgb(50,50,50))",
     // pointerEvents: "none",
   },
 };
@@ -73,19 +74,44 @@ function SpotLightHelper() {
   const spotLightRef = useRef(null);
 
   // useHelper(spotLightRef, THREE.SpotLightHelper);
-  return <spotLight ref={spotLightRef} position={[-1, 1, 4]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
+  return <spotLight ref={spotLightRef} position={[-2, 5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
+}
+
+function SpotLightHelper2() {
+  const spotLightRef = useRef(null);
+
+  // useHelper(spotLightRef, THREE.SpotLightHelper);
+  return <spotLight ref={spotLightRef} position={[2, 5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
+}
+
+function SpotLightHelper3() {
+  const spotLightRef = useRef(null);
+
+  // useHelper(spotLightRef, THREE.SpotLightHelper);
+  return <spotLight ref={spotLightRef} position={[-2, -5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
+}
+
+function SpotLightHelper4() {
+  const spotLightRef = useRef(null);
+
+  // useHelper(spotLightRef, THREE.SpotLightHelper);
+  return <spotLight ref={spotLightRef} position={[2, -5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />;
 }
 
 export function ThreeFiberCanvas() {
   return (
-    <Canvas style={style.threeJsCanvas} camera={{ position: [0, 1, 5] }}>
-      <OrbitControls />
-      <ambientLight />
-      <spotLight position={[1, 1, 4]} intensity={5} />
+    <Canvas style={style.threeJsCanvas} camera={{ position: [0, 0, 5] }}>
+      {/* <OrbitControls /> */}
+      {/* <ambientLight /> */}
+      {/* <hemisphereLight  args={["white", "lightgray", 4]}/> */}
+      {/* <pointLight position={[0, -3, 4]} intensity={3} /> */}
       <SpotLightHelper />
-      <DiamondSolid position={[0, -1.5, 0]} />
-      {/* <DiamondTop />
-      <DiamondBottom /> */}
+      <SpotLightHelper2 />
+      <SpotLightHelper3 />
+      <SpotLightHelper4 />
+      <Crown position={[0, 0.245, 0]} scale={0.5} />
+      {/* <DiamondSolid position={[0, -1.5, 0]} /> */}
+      <DiamondBlue position={[0, -0.45, 0]} scale={1.35} />
       <StarsAnim />
     </Canvas>
   );

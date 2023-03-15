@@ -22,6 +22,7 @@ export function DiamondSolid(props) {
     }
     meshRef.current.rotation.y -= 0.005;
   });
+  
   return (
     <group ref={meshRef} {...props} dispose={null} scale={0.02}>
       <mesh geometry={nodes.Diamond_Diamond_0.geometry} material={materials.Diamond} />

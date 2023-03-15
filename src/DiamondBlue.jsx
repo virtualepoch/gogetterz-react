@@ -19,7 +19,7 @@ export function DiamondBlue(props) {
     if (!meshRef.current) {
       return;
     }
-    meshRef.current.rotation.y -= 0.005;
+    meshRef.current.rotation.y -= 0.002;
   });
 
   return (

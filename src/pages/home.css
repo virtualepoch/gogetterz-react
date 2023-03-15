@@ -1,6 +1,6 @@
 .header-container {
   width: fit-content;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -15,14 +15,14 @@
 }
 
 .letter-g {
-  font: 400 clamp(6rem, 5vw, 8rem) Lorea;
+  font: 400 clamp(5rem, 5vw, 7rem) Lorea;
   color: white;
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
 }
 
 .gogetterz {
-  font: 400 clamp(4rem, 5vw, 5rem) Lorea;
+  font: 400 clamp(3rem, 5vw, 4rem) Lorea;
   color: white;
   line-height: 3rem;
   letter-spacing: 0.3rem;

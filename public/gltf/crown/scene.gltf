@@ -214,7 +214,7 @@
   ],
   "images": [
     {
-      "uri": "textures/Material_emissive.png"
+      "uri": "textures/Material_emissive_100.png"
     }
   ],
   "materials": [

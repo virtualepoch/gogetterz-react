@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
+import { BtnToTop } from "./components/BtnToTop";
 import { CartProvider } from "./CartContext";
 import { HeaderNavMenuCart } from "./components/HeaderNavMenuCart";
 import { Home } from "./pages/Home";
@@ -17,7 +18,7 @@ function useScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname]);
 }
 
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <>
+      <BtnToTop />
       <CartProvider>
         <HeaderNavMenuCart />
         <section style={{ ...pageContainer }}>

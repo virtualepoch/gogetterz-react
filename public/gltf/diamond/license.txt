@@ -1,11 +1,11 @@
 Model Information:
 * title:	Diamond
-* source:	https://sketchfab.com/3d-models/diamond-49281469d4714f5f9ec03b992cd3612c
-* author:	fakepad (https://sketchfab.com/fakepad)
+* source:	https://sketchfab.com/3d-models/diamond-8540be07fb3d441f8cca4e9fd45c9367
+* author:	aysenaz (https://sketchfab.com/Aysenazkara)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Diamond" (https://sketchfab.com/3d-models/diamond-49281469d4714f5f9ec03b992cd3612c) by fakepad (https://sketchfab.com/fakepad) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Diamond" (https://sketchfab.com/3d-models/diamond-8540be07fb3d441f8cca4e9fd45c9367) by aysenaz (https://sketchfab.com/Aysenazkara) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

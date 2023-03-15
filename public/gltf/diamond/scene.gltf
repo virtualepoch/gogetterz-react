@@ -1,66 +1,88 @@
 {
   "accessors": [
     {
-      "bufferView": 1,
+      "bufferView": 2,
       "componentType": 5126,
-      "count": 952,
+      "count": 48,
       "max": [
-        1.0,
-        1.0,
-        0.3422519862651825
+        70.14806365966797,
+        89.09968566894531,
+        81.00000762939453
       ],
       "min": [
-        -1.0,
-        -1.0,
-        -0.9249920845031738
+        -70.14806365966797,
+        -36.40302276611328,
+        -80.99999237060547
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 576,
+      "componentType": 5126,
+      "count": 48,
+      "max": [
+        0.7980546355247498,
+        1.0,
+        0.6911355257034302
+      ],
+      "min": [
+        -0.798054575920105,
+        -0.6025853157043457,
+        -0.6911357045173645
       ],
       "type": "VEC3"
     },
     {
       "bufferView": 1,
-      "byteOffset": 11424,
       "componentType": 5126,
-      "count": 952,
+      "count": 48,
       "max": [
-        0.9996066689491272,
-        0.9996066093444824,
-        1.0
+        0.9578461050987244,
+        0.49000000953674316
       ],
       "min": [
-        -0.9996066689491272,
-        -0.9996066689491272,
-        -0.7341024279594421
+        0.04215388000011444,
+        0.009999990463256836
       ],
-      "type": "VEC3"
+      "type": "VEC2"
     },
     {
       "bufferView": 0,
       "componentType": 5125,
-      "count": 1590,
+      "count": 66,
       "type": "SCALAR"
     }
   ],
   "asset": {
     "extras": {
-      "author": "fakepad (https://sketchfab.com/fakepad)",
+      "author": "aysenaz (https://sketchfab.com/Aysenazkara)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/diamond-49281469d4714f5f9ec03b992cd3612c",
+      "source": "https://sketchfab.com/3d-models/diamond-8540be07fb3d441f8cca4e9fd45c9367",
       "title": "Diamond"
     },
-    "generator": "Sketchfab-13.95.0",
+    "generator": "Sketchfab-12.64.0",
     "version": "2.0"
   },
   "bufferViews": [
     {
       "buffer": 0,
-      "byteLength": 6360,
+      "byteLength": 264,
       "name": "floatBufferViews",
       "target": 34963
     },
     {
       "buffer": 0,
-      "byteLength": 22848,
-      "byteOffset": 6360,
+      "byteLength": 384,
+      "byteOffset": 264,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1152,
+      "byteOffset": 648,
       "byteStride": 12,
       "name": "floatBufferViews",
       "target": 34962
@@ -68,49 +90,37 @@
   ],
   "buffers": [
     {
-      "byteLength": 29208,
+      "byteLength": 1800,
       "uri": "scene.bin"
     }
   ],
-  "extensionsUsed": [
-    "KHR_materials_clearcoat",
-    "KHR_materials_transmission"
-  ],
   "materials": [
     {
-      "alphaMode": "BLEND",
       "doubleSided": true,
-      "extensions": {
-        "KHR_materials_clearcoat": {
-          "clearcoatFactor": 1.0,
-          "clearcoatRoughnessFactor": 0.04
-        },
-        "KHR_materials_transmission": {
-          "transmissionFactor": 0.6845704672623765
-        }
-      },
-      "name": "Material.001",
+      "name": "Diamond",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0.013483451337537438,
-          0.05026880629297484,
-          0.3581108469719256,
-          0.3154295327376236
+          0.02,
+          0.02,
+          0.02,
+          1.0
         ],
-        "roughnessFactor": 0.0
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
       }
     }
   ],
   "meshes": [
     {
-      "name": "dobj_Material.001_0",
+      "name": "Diamond_Diamond_0",
       "primitives": [
         {
           "attributes": {
             "NORMAL": 1,
-            "POSITION": 0
+            "POSITION": 0,
+            "TEXCOORD_0": 2
           },
-          "indices": 2,
+          "indices": 3,
           "material": 0,
           "mode": 4
         }
@@ -147,16 +157,16 @@
         2
       ],
       "matrix": [
-        0.009999999776482582,
+        1.0,
         0.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        0.009999999776482582,
+        1.0,
         0.0,
         0.0,
-        -0.009999999776482582,
+        -1.0,
         0.0,
         0.0,
         0.0,
@@ -164,7 +174,7 @@
         0.0,
         1.0
       ],
-      "name": "a6460a5e5c5b430e9e7224f567300425.fbx"
+      "name": "059f4dae76d94f2d87d502ed2c8d96cd.fbx"
     },
     {
       "children": [
@@ -176,29 +186,11 @@
       "children": [
         4
       ],
-      "matrix": [
-        100.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        -1.629206793918314e-05,
-        -99.99999999999868,
-        0.0,
-        0.0,
-        99.99999999999868,
-        -1.629206793918314e-05,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "name": "dobj"
+      "name": "Diamond"
     },
     {
       "mesh": 0,
-      "name": "dobj_Material.001_0"
+      "name": "Diamond_Diamond_0"
     }
   ],
   "scene": 0,

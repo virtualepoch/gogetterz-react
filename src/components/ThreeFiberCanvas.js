@@ -7,13 +7,13 @@ import { Crown } from "../Crown";
 const style = {
   threeJsCanvas: {
     width: "100%",
-    height: "100%",
+    height: "calc(100% + 60px)",
     position: "fixed",
     top: 0,
     left: 0,
     zIndex: "-2",
     // border: "solid red",
-    background: "linear-gradient(to right, rgb(50,50,50), black, rgb(50,50,50))",
+    background: "black",
     // pointerEvents: "none",
   },
 };

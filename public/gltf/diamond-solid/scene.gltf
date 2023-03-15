@@ -100,13 +100,13 @@
       "name": "Diamond",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
-          0,
-          0,
-          0,
+          0.02,
+          0.02,
+          0.02,
           1.0
         ],
         "metallicFactor": 0.0,
-        "roughnessFactor": 0.9647423733974251
+        "roughnessFactor": 0.5
       }
     }
   ],

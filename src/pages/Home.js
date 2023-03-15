@@ -25,13 +25,13 @@ export function Home() {
         <img src={homeImg3} className="home-img img-3" alt="home-03" />
         <img src={homeImg4} className="home-img img-4" alt="home-04" />
         <img src={homeImg5} className="home-img img-5" alt="home-05" />
-        <div className="header-container">
-          <h1 className="welcome-to">Welcome to</h1>
-          <h1 className="gogetterz">
-            <span className="letter-g">g</span>o<span className="letter-g">g</span>
-            etterz
-          </h1>
-        </div>
+      </div>
+      <div className="header-container">
+        <h1 className="welcome-to">Welcome to</h1>
+        <h1 className="gogetterz">
+          <span className="letter-g">g</span>o<span className="letter-g">g</span>
+          etterz
+        </h1>
       </div>
       <ActionBtn />
     </>

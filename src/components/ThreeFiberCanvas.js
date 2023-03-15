@@ -46,11 +46,6 @@ const style = {
 // }
 
 export function ThreeFiberCanvas() {
-  const starsRef = useRef(null);
-  window.addEventListener("scroll", () => {
-    starsRef.current.rotation.x -= 0.001;
-  });
-
   return (
     <Canvas style={style.threeJsCanvas} camera={{ position: [0, 1, 5] }}>
       {/* <OrbitControls /> */}
@@ -65,7 +60,7 @@ export function ThreeFiberCanvas() {
       <DiamondSolid position={[0, -1.16, 0]} scale={0.016} />
       {/* <DiamondBlue position={[0, -0.45, 0]} scale={1.35} /> */}
       {/* <StarsAnim /> */}
-      <Stars ref={starsRef} />
+      <Stars />
     </Canvas>
   );
 }

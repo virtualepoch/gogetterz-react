@@ -4,20 +4,6 @@ import { OrbitControls, Stars, useTexture, useControls, useHelper } from "@react
 import { DiamondSolid } from "../DiamondSolid";
 import { Crown } from "../Crown";
 
-const style = {
-  threeJsCanvas: {
-    width: "100%",
-    height: "calc(100% + 60px)",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    zIndex: "-2",
-    // border: "solid red",
-    background: "black",
-    // pointerEvents: "none",
-  },
-};
-
 // function StarsAnim() {
 //   const starsRef = useRef(null);
 //   useFrame(() => {
@@ -46,8 +32,20 @@ const style = {
 // }
 
 export function ThreeFiberCanvas() {
+  const threeFiberCanvas = {
+    width: "100%",
+    height: "calc(100% + 60px)",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: "-2",
+    // border: "solid red",
+    background: "black",
+    // pointerEvents: "none",
+  };
+
   return (
-    <Canvas style={style.threeJsCanvas} camera={{ position: [0, 1, 5] }}>
+    <Canvas style={{ ...threeFiberCanvas }} camera={{ position: [0, 1, 5] }}>
       {/* <OrbitControls /> */}
       {/* <ambientLight /> */}
       {/* <hemisphereLight  args={["white", "white", 4]}/> */}
@@ -56,7 +54,7 @@ export function ThreeFiberCanvas() {
       <spotLight position={[0, 5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />
       {/* <SpotLightHelper2 /> */}
       <spotLight position={[0, -5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />
-      <Crown position={[0, 0.245, 0]} scale={0.4} />
+      {/* <Crown position={[0, 0.245, 0]} scale={0.4} /> */}
       <DiamondSolid position={[0, -1.16, 0]} scale={0.016} />
       {/* <DiamondBlue position={[0, -0.45, 0]} scale={1.35} /> */}
       {/* <StarsAnim /> */}

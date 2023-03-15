@@ -1,5 +1,6 @@
 import { ProductCard } from "../components/ProductCard";
 import { productsArray } from "../productsStore";
+import { BtnToTop } from "../components/BtnToTop";
 
 export function Store() {
   const style = {
@@ -19,6 +20,7 @@ export function Store() {
 
   return (
     <>
+      <BtnToTop />
       <h1 style={style.storeH1}>Welcome to the store front.</h1>
       <div style={style.itemContainer} className="itemContainer">
         {productsArray.map((product, idx) => (

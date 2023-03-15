@@ -19,7 +19,7 @@ export function BtnToTop() {
     document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  var style = {
+  const style = {
     toTopBtn: {
       width: "50px",
       height: "50px",

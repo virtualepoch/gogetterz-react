@@ -1,33 +1,14 @@
-.App {
-  border: none;
-}
-
+/* UNIVERSAL STYLING /////////////////////////*/
 a {
   text-decoration: none !important;
   color: white;
 }
 
+/* COMPONENTS /////////////////////////////// */
+/* ActionBtn.js */
 @media (prefers-reduced-motion: no-preference) {
-  .btn-border {
+  .action-btn-border {
     animation: action-btn-anim infinite 10s linear;
-  }
-}
-
-.itemContainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px 10px;
-}
-
-@media (max-width: 1100px) {
-  .itemContainer {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .itemContainer {
-    grid-template-columns: auto;
   }
 }
 
@@ -40,6 +21,36 @@ a {
   }
 }
 
+/* Footer.js */
+.social-media-icon {
+  border: solid gold;
+  border-radius: 20px;
+  width: 60px;
+  height: 60px;
+  box-shadow: inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.instagram {
+  background: url(./assets/icons/instagram.svg) center / 50% no-repeat, radial-gradient(rgb(128, 128, 128), rgb(55, 55, 55));
+}
+
+.facebook {
+  background: url(./assets/icons/facebook-f.svg) center / 40% no-repeat, radial-gradient(rgb(128, 128, 128), rgb(55, 55, 55));
+}
+
+.twitter {
+  background: url(./assets/icons/twitter.svg) center / 50% no-repeat, radial-gradient(rgb(128, 128, 128), rgb(55, 55, 55));
+}
+
+/* HeaderNavMenuCart.js bootstrap Modal style edits */
+.modal-dialog,
+.modal-content {
+  top: 30px;
+  height: 93%;
+  overflow: auto;
+}
+
+/* ProductCard.js */
 .addToCartBtnText {
   filter: drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold);
   animation: addToCartBtnText-anim 8s ease-in-out infinite;
@@ -60,9 +71,22 @@ a {
   }
 }
 
-.modal-dialog,
-.modal-content {
-  top: 30px;
-  height: 93%;
-  overflow: auto;
+/* PAGES ///////////////////////////////// */
+/* Store.js styling */
+.itemContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px 10px;
+}
+
+@media (max-width: 1100px) {
+  .itemContainer {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .itemContainer {
+    grid-template-columns: auto;
+  }
 }

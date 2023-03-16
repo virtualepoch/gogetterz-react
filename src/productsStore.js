@@ -1,38 +1,45 @@
-import hoodieWhite01 from "./assets/images/card-images/hoodie_white_500.jpg";
-import hoodieBlack01 from "./assets/images/card-images/hoodie_black_500.jpg";
-import hoodieCamo from "./assets/images/card-images/hoodie_camo.jpg";
-import hoodiePink from "./assets/images/card-images/hoodie_pink.jpg";
-import hat01 from "./assets/images/card-images/hat_01_500.jpg";
-import hat02 from "./assets/images/card-images/hat_02_500.jpg";
+import hoodieWhite from "./assets/images/product-images/hoodies/hoodie_white.jpg";
+import hoodieBlack from "./assets/images/product-images/hoodies/hoodie_black.jpg";
+import hoodieCamo from "./assets/images/product-images/hoodies/hoodie_camo.jpg";
+import hoodiePink from "./assets/images/product-images/hoodies/hoodie_pink.jpg";
+import hatBlackFrontBack from "./assets/images/product-images/hats/hat_black_front_back.jpeg";
+import hatBlackDadFrontBack from "./assets/images/product-images/hats/hat_blackdad_front_back.jpeg";
 import sticker01 from "./assets/logos/gogetterz_01_500.png";
+
+// item 1: price_1Mm3F2CN1wLnjqgADJorAxTF
+// item 2: price_1Mm3GoCN1wLnjqgAzVkCHt9A
 
 const productsArray = [
   {
-    id: "1",
+    // id: "1",
+    id: "price_1Mm4H2CN1wLnjqgAsMBWqh6F",
     title: "T-Shirt - White",
     price: 29.99,
-    imgUrl: hoodieWhite01,
+    imgUrl: hoodieWhite
+  ,
     altTag: "t-shirt-white",
   },
   {
-    id: "2",
+    // id: "2",
+    id: "price_1Mm43MCN1wLnjqgAMiBGr7uY",
     title: "T-Shirt - Black",
     price: 29.99,
-    imgUrl: hoodieBlack01,
+    imgUrl: hoodieBlack,
     altTag: "t-shirt-black",
   },
   {
     id: "3",
     title: "Hoodie - White",
     price: 49.99,
-    imgUrl: hoodieWhite01,
+    imgUrl: hoodieWhite
+  ,
     altTag: "hoodie-white",
   },
   {
     id: "4",
     title: "Hoodie - Black",
     price: 49.99,
-    imgUrl: hoodieBlack01,
+    imgUrl: hoodieBlack,
     altTag: "hoodie-black",
   },
   {
@@ -51,16 +58,16 @@ const productsArray = [
   },
   {
     id: "7",
-    title: "Hat",
+    title: "Hat - Black",
     price: 34.99,
-    imgUrl: hat01,
+    imgUrl: hatBlackFrontBack,
     altTag: "hat",
   },
   {
     id: "8",
-    title: "Hat",
+    title: "Dad Hat - Black",
     price: 34.99,
-    imgUrl: hat02,
+    imgUrl: hatBlackDadFrontBack,
     altTag: "hat",
   },
   {

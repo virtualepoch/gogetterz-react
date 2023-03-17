@@ -13,13 +13,12 @@ import { Contact } from "./pages/Contact";
 import "./App.css";
 import "./pages/home.css";
 import "./pages/about-contact.css";
-import { Footer } from "./components/Footer";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname]);
 }
 
@@ -48,7 +47,6 @@ function App() {
           </Routes>
         </section>
       </CartProvider>
-      <Footer />
     </>
   );
 }

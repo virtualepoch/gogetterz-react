@@ -1,45 +1,49 @@
-import hoodieWhite from "./assets/images/product-images/hoodies/hoodie_white.jpg";
-import hoodieBlack from "./assets/images/product-images/hoodies/hoodie_black.jpg";
-import hoodieCamo from "./assets/images/product-images/hoodies/hoodie_camo.jpg";
-import hoodiePink from "./assets/images/product-images/hoodies/hoodie_pink.jpg";
-import hatBlackFrontBack from "./assets/images/product-images/hats/hat_black_front_back.jpeg";
-import hatBlackDadFrontBack from "./assets/images/product-images/hats/hat_blackdad_front_back.jpeg";
+import hoodieWhite01 from "./assets/images/card-images/hoodie_white_500.jpg";
+import hoodieBlack01 from "./assets/images/card-images/hoodie_black_500.jpg";
+import hoodieCamo from "./assets/images/card-images/hoodie_camo.jpg";
+import hoodiePink from "./assets/images/card-images/hoodie_pink.jpg";
+import hat01 from "./assets/images/card-images/hat_01_500.jpg";
+import hat02 from "./assets/images/card-images/hat_02_500.jpg";
 import sticker01 from "./assets/logos/gogetterz_01_500.png";
-
-// item 1: price_1Mm3F2CN1wLnjqgADJorAxTF
-// item 2: price_1Mm3GoCN1wLnjqgAzVkCHt9A
 
 const productsArray = [
   {
-    // id: "1",
-    id: "price_1Mm4H2CN1wLnjqgAsMBWqh6F",
+    id: "1",
     title: "T-Shirt - White",
     price: 29.99,
-    imgUrl: hoodieWhite
-  ,
+    imgUrl: hoodieWhite01,
     altTag: "t-shirt-white",
   },
   {
-    // id: "2",
-    id: "price_1Mm43MCN1wLnjqgAMiBGr7uY",
+    id: "2",
     title: "T-Shirt - Black",
     price: 29.99,
-    imgUrl: hoodieBlack,
+    imgUrl: hoodieBlack01,
     altTag: "t-shirt-black",
   },
   {
     id: "3",
     title: "Hoodie - White",
+<<<<<<< HEAD
     price: 69.99,
     imgUrl: hoodieWhite
   ,
+=======
+    price: 49.99,
+    imgUrl: hoodieWhite01,
+>>>>>>> parent of 77ea4c1 (asset updates / footer updates)
     altTag: "hoodie-white",
   },
   {
     id: "4",
     title: "Hoodie - Black",
+<<<<<<< HEAD
     price: 69.99,
     imgUrl: hoodieBlack,
+=======
+    price: 49.99,
+    imgUrl: hoodieBlack01,
+>>>>>>> parent of 77ea4c1 (asset updates / footer updates)
     altTag: "hoodie-black",
   },
   {
@@ -58,16 +62,28 @@ const productsArray = [
   },
   {
     id: "7",
+<<<<<<< HEAD
     title: "Hat - Black",
     price: 37.99,
     imgUrl: hatBlackFrontBack,
+=======
+    title: "Hat",
+    price: 34.99,
+    imgUrl: hat01,
+>>>>>>> parent of 77ea4c1 (asset updates / footer updates)
     altTag: "hat",
   },
   {
     id: "8",
+<<<<<<< HEAD
     title: "Dad Hat - Black",
     price: 37.99,
     imgUrl: hatBlackDadFrontBack,
+=======
+    title: "Hat",
+    price: 34.99,
+    imgUrl: hat02,
+>>>>>>> parent of 77ea4c1 (asset updates / footer updates)
     altTag: "hat",
   },
   {

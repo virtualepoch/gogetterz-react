@@ -6,59 +6,6 @@ import { CartProduct } from "./CartProduct";
 import "./header.css";
 
 export function HeaderNavMenuCart() {
-  // navMenu logic
-  const navMenu = useRef(null);
-  const navMenuBtn = useRef(null);
-
-  function openCloseNavMenu() {
-    navMenu.current.classList.toggle("open");
-    navMenuBtn.current.classList.toggle("open");
-  }
-
-  // MUST HAVE: When 'SITE-LOGO' or 'SITE-TITLE' are clicked this CLOSES the 'NAV-MENU' (if open) and prevents it from opening (if closed).
-  function closeNavMenu() {
-    if (navMenu.current.classList.contains("open")) {
-      navMenu.current.classList.remove("open");
-      navMenuBtn.current.classList.remove("open");
-    }
-  }
-
-  function CustomLink({ to, children, ...props }) {
-    const resolvedPath = useResolvedPath(to);
-    const isActive = useMatch({ path: resolvedPath.pathname, end: true });
-    return (
-      <Link to={to} {...props} className={isActive ? "active link" : "link"}>
-        {children}
-      </Link>
-    );
-  }
-
-  const cart = useContext(CartContext);
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  const checkout = async () => {
-    await fetch("http://localhost:4000/checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ items: cart.items }),
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        if (response.url) {
-          window.location.assign(response.url); // Forwarding user to Stripe
-        }
-      });
-  };
-
-  const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
-
   // element styling
   const styleHeader = {
     // header elements
@@ -146,6 +93,41 @@ export function HeaderNavMenuCart() {
     },
   };
 
+  // navMenu logic
+  const navMenu = useRef(null);
+  const navMenuBtn = useRef(null);
+
+  function openCloseNavMenu() {
+    navMenu.current.classList.toggle("open");
+    navMenuBtn.current.classList.toggle("open");
+  }
+
+  // MUST HAVE: When 'SITE-LOGO' or 'SITE-TITLE' are clicked this CLOSES the 'NAV-MENU' (if open) and prevents it from opening (if closed).
+  function closeNavMenu() {
+    if (navMenu.current.classList.contains("open")) {
+      navMenu.current.classList.remove("open");
+      navMenuBtn.current.classList.remove("open");
+    }
+  }
+
+  function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to);
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+    return (
+      <Link to={to} {...props} className={isActive ? "active link" : "link"}>
+        {children}
+      </Link>
+    );
+  }
+
+  const cart = useContext(CartContext);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
+
   return (
     <>
       <header style={styleHeader.mainHeader}>
@@ -195,7 +177,7 @@ export function HeaderNavMenuCart() {
 
               <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
 
-              <button style={styleModal.purchaseBtn} type="button" onClick={checkout}>
+              <button style={styleModal.purchaseBtn} type="button">
                 Purchase items!
               </button>
             </>

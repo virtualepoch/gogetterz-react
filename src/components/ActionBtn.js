@@ -46,7 +46,7 @@ export function ActionBtn() {
 
   return (
     <div style={style.btnContainer}>
-      <div style={style.btnBorder} className="action-btn-border"></div>
+      <div style={style.btnBorder} className="btn-border"></div>
       <Link style={style.actionBtn} to={"/store"}>
         GO TO STORE
       </Link>

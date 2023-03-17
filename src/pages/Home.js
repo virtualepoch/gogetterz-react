@@ -15,7 +15,7 @@ export function Home() {
     <>
       <ThreeFiberCanvas />
       <div className="header-container">
-        <h1 className="welcome-to">Welcome to</h1>
+        <h1 className="welcome-to">Welcome to test #1</h1>
         <h1 className="gogetterz">
           <span className="letter-g">g</span>o<span className="letter-g">g</span>
           etterz

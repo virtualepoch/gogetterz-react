@@ -1,7 +1,7 @@
 export function Footer() {
   const style = {
     footer: {
-      width: "100%",
+      maxWidth: "100%",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",

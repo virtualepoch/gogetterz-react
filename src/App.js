@@ -40,15 +40,15 @@ function App() {
         <section style={{ ...pageContainer }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="store" element={<Store />} /> */}
+            <Route path="store" element={<Store />} />
             <Route path="success" element={<Success />} />
             <Route path="cancel" element={<Cancel />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
           </Routes>
-          <Footer />
         </section>
       </CartProvider>
+      <Footer />
     </>
   );
 }

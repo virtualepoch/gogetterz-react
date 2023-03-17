@@ -123,6 +123,7 @@ export function HeaderNavMenuCart() {
   const styleModal = {
     modalContainer: {
       width: "100%",
+      maxWidth: "1200px",
       MarginBottom: "20px",
       paddingBottom: "50px",
       overflow: "auto",

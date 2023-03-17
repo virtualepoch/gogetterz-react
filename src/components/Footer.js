@@ -6,7 +6,8 @@ export function Footer() {
       flexDirection: "column",
       alignItems: "center",
       background: "white",
-      margin: "100px auto",
+      marginTop: "100px",
+      paddingBottom: "100px",
       borderTop: "solid 50px",
     },
     socialMediaRow: {

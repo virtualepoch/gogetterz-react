@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="App">
       <BtnToTop />
       <CartProvider>
         <HeaderNavMenuCart />
@@ -49,7 +49,7 @@ function App() {
         </section>
       </CartProvider>
       <Footer />
-    </>
+    </div>
   );
 }
 

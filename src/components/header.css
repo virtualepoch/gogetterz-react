@@ -1,6 +1,7 @@
 /* BUTTON - OPEN/CLOSE NAVIGATION MENU */
 .button-nav-menu {
   width: 56px;
+  min-width: 56px;
   height: 56px;
   margin: 2px;
   background: radial-gradient(rgb(128, 128, 128, 0.5), rgb(55, 55, 55, 0.5));

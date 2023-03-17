@@ -26,6 +26,7 @@ a {
   border: solid gold;
   border-radius: 20px;
   width: 60px;
+  min-width: 60px;
   height: 60px;
   box-shadow: inset -2px 2px 5px 1px gray, inset 2px -2px 5px 1px rgba(0, 0, 0, 0.4);
 }

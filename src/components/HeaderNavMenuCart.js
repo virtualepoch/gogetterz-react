@@ -72,6 +72,7 @@ export function HeaderNavMenuCart() {
       zIndex: "100",
       margin: "0 auto",
       display: "flex",
+      flexWrap: "wrap",
       alignItems: "center",
       justifyContent: "space-between",
     },
@@ -102,6 +103,7 @@ export function HeaderNavMenuCart() {
     },
     cartBtn: {
       width: "56px",
+      minWidth: "56px",
       height: "56px",
       margin: "2px",
       border: "none",

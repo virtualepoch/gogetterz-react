@@ -9,7 +9,7 @@ import { Success } from "./pages/Success";
 import { Cancel } from "./pages/Cancel";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./pages/home.css";
 import "./pages/about-contact.css";

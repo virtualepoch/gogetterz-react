@@ -6,12 +6,12 @@ export function ProductCard(props) {
   const style = {
     card: {
       width: "100%",
-      height: "fit-content",
+      height: "100%",
       borderRadius: "10px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      justifyContent: "center",
+      justifyContent: "space-between",
       padding: "20px",
       boxShadow: "0 2px 10px 1px lightgray",
     },

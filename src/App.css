@@ -1,33 +1,14 @@
-.App {
-  border: none;
-}
-
+/* UNIVERSAL STYLING /////////////////////////*/
 a {
   text-decoration: none !important;
   color: white;
 }
 
+/* COMPONENTS /////////////////////////////// */
+/* ActionBtn.js */
 @media (prefers-reduced-motion: no-preference) {
-  .btn-border {
+  .action-btn-border {
     animation: action-btn-anim infinite 10s linear;
-  }
-}
-
-.itemContainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 20px 10px;
-}
-
-@media (max-width: 1100px) {
-  .itemContainer {
-    grid-template-columns: auto auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .itemContainer {
-    grid-template-columns: auto;
   }
 }
 
@@ -40,7 +21,6 @@ a {
   }
 }
 
-<<<<<<< HEAD
 /* Footer.js */
 .social-media-icon {
   border: solid gold;
@@ -72,8 +52,6 @@ a {
 }
 
 /* ProductCard.js */
-=======
->>>>>>> parent of 77ea4c1 (asset updates / footer updates)
 .addToCartBtnText {
   filter: drop-shadow(-0 -3px 5px gold) drop-shadow(0 3px 5px gold);
   animation: addToCartBtnText-anim 8s ease-in-out infinite;
@@ -94,9 +72,22 @@ a {
   }
 }
 
-.modal-dialog,
-.modal-content {
-  top: 30px;
-  height: 93%;
-  overflow: auto;
+/* PAGES ///////////////////////////////// */
+/* Store.js styling */
+.itemContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px 10px;
+}
+
+@media (max-width: 1100px) {
+  .itemContainer {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .itemContainer {
+    grid-template-columns: auto;
+  }
 }

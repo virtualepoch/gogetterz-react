@@ -119,7 +119,7 @@ export function HeaderNavMenuCart() {
       color: "red",
     },
   };
-  // nav styling is in App.css
+  // nav styling is in header.css
   const styleModal = {
     modalContainer: {
       width: "100%",

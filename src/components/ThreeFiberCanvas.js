@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Stars, useTexture, useControls, useHelper } from "@react-three/drei";
-import { Crown } from "../Crown";
 import { Diamond } from "../Diamond";
 
 // function StarsAnim() {
@@ -15,7 +14,6 @@ import { Diamond } from "../Diamond";
 //   return <Stars ref={starsRef} />;
 // }
 
-// window.addEventListener("scroll", starsAnim);
 
 // function SpotLightHelper() {
 //   const spotLightRef = useRef(null);
@@ -44,7 +42,7 @@ export function ThreeFiberCanvas() {
 
   return (
     <Canvas style={{ ...threeFiberCanvas }} camera={{ position: [0, 1, 5] }}>
-      {/* <OrbitControls /> */}
+      <OrbitControls />
       <ambientLight />
       {/* <hemisphereLight  args={["white", "white", 4]}/> */}
       {/* <pointLight position={[0, -3, 4]} intensity={3} /> */}
@@ -52,9 +50,7 @@ export function ThreeFiberCanvas() {
       <spotLight position={[0, 5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />
       {/* <SpotLightHelper2 /> */}
       <spotLight position={[0, -5, 0]} intensity={5} args={["white", 5, 10, Math.PI * 0.2]} />
-      <Crown position={[0, 0.8, 0]} scale={0.8} />
-      <Diamond position={[0, -1.16, 0]} scale={0.016} />
-      {/* <DiamondBlue position={[0, -0.45, 0]} scale={1.35} /> */}
+      <Diamond position={[0, -1, 0]} scale={0.016} />
       {/* <StarsAnim /> */}
       <Stars />
     </Canvas>

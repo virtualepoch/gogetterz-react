@@ -22,7 +22,7 @@ a {
 }
 
 /* Footer.js */
-.social-media-icon {
+.social-media-link {
   border: solid gold;
   border-radius: 20px;
   width: 60px;
@@ -37,10 +37,6 @@ a {
 
 .facebook {
   background: url(./assets/icons/facebook-f.svg) center / 40% no-repeat, radial-gradient(rgb(128, 128, 128), rgb(55, 55, 55));
-}
-
-.twitter {
-  background: url(./assets/icons/twitter.svg) center / 50% no-repeat, radial-gradient(rgb(128, 128, 128), rgb(55, 55, 55));
 }
 
 /* HeaderNavMenuCart.js bootstrap Modal style edits */

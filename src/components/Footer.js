@@ -18,7 +18,7 @@ export function Footer() {
       flexWrap: "wrap",
       alignItems: "center",
       justifyContent: "center",
-      gap: "20px",
+      gap: "30px",
     },
     policiesRow: {
       width: "fit-content",
@@ -32,17 +32,21 @@ export function Footer() {
     },
   };
   return (
-    <div style={style.footer}>
+    <footer style={style.footer}>
       <div style={style.socialMediaRow}>
-        <div className="social-media-icon instagram"></div>
-        <div className="social-media-icon facebook"></div>
-        <div className="social-media-icon twitter"></div>
+        <a className="social-media-link instagram" href="https://www.instagram.com/kingcobrakang/" title="Instagram Profile" target="_blank" rel="noreferrer">
+          <p className="visually-hidden">Link to Instagram</p>
+        </a>
+
+        <a className="social-media-link facebook" href="https://www.facebook.com/KingKang711" title="Facebook Profile" target="_blank" rel="noreferrer">
+          <p className="visually-hidden">Link to Facebook</p>
+        </a>
       </div>
       <div style={style.policiesRow}>
         <p>Privacy Policy</p>
         <p>Refund Policy</p>
         <p>Report Issues with Website</p>
       </div>
-    </div>
+    </footer>
   );
 }

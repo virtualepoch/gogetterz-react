@@ -1,4 +1,4 @@
-// import { ImageEffectCanvas } from "../components/ImageEffectCanvas";
+import { Image } from "../components/Image";
 import homeImg1 from "../assets/images/home-images/01.jpg";
 import homeImg2 from "../assets/images/home-images/02.jpg";
 import homeImg3 from "../assets/images/home-images/03.jpg";
@@ -11,6 +11,10 @@ import { ActionBtn } from "../components/ActionBtn";
 import { ThreeFiberCanvas } from "../components/ThreeFiberCanvas";
 
 export function Home() {
+  const imgs = [
+    { src: homeImg1, className: "home-img img-1", alt: "home-01" },
+  ];
+
   return (
     <>
       <ThreeFiberCanvas />
@@ -23,7 +27,11 @@ export function Home() {
       </div>
 
       <div className="img-stack-container">
-        <img src={homeImg1} className="home-img img-1" alt="home-01" />
+        {imgs.map((index, item) => (
+          <Image key={index} info={item} />
+        ))}
+
+        <img src={homeImg1} className="home-img img-1" alt="home-02" />
         <img src={homeImg2} className="home-img img-2" alt="home-02" />
         <img src={homeImg3} className="home-img img-3" alt="home-03" />
         <img src={homeImg4} className="home-img img-4" alt="home-04" />
